@@ -209,3 +209,4 @@ hr.div { border: 0; border-top: 1px solid var(--line); margin: 14px 0; }
 .live-india { color: #ffd166; }
 .live-link { color: #9dc1ff; font-size: 13px; }
 .live-refresh { background: none; border: 0; color: #9dc1ff; cursor: pointer; font-size: 12px; padding: 0; }
+.live-email { width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #c5d0e6; background: #fff; color: #12203a; }

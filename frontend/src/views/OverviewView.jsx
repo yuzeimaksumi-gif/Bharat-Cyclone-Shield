@@ -6,6 +6,7 @@ import RiskBreakdown from "../components/simulator/RiskBreakdown";
 import { REGIONS } from "../data/regions";
 import { DEFAULT_LAYER_STATE } from "../constants/layers";
 import LiveCycloneWatch from "../components/live/LiveCycloneWatch";
+import LiveAssessmentPanel from "../components/live/LiveAssessmentPanel";
 
 export default function OverviewView({ selectedId, onSelect, sim }) {
   const score = (r) => sim.result?.regions[r.id]?.risk ?? r.demoScore;
@@ -15,6 +16,7 @@ export default function OverviewView({ selectedId, onSelect, sim }) {
   return (
     <div className="stack">
       <LiveCycloneWatch />
+      <LiveAssessmentPanel selectedId={selectedId} onSelect={onSelect} sim={sim} />
       <div className="grid stats">
         <StatCard label="Demo regions" value={REGIONS.length} hint="Illustrative profiles" />
         <StatCard label="Avg. risk score" value={avg} hint={sim.result ? "SIMULATED scenario" : "Placeholder (no scenario)"} accent="var(--orange)" />
